@@ -1,0 +1,12 @@
+body {
+  font-family: $main-font;
+  letter-spacing: 0.3px;
+  overflow-x: hidden;
+  max-width: 100%;
+  min-width: 320px;
+  @include font-size($font-size-base);
+}
+::selection {
+  background-color: $color-accent;
+  color: $color-lightest;
+}

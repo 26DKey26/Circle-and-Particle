@@ -1,0 +1,29 @@
+// reset
+@import "../node_modules/reset-css/sass/reset";
+
+// base
+@import "_base/fonts";
+@import "_base/mixins";
+@import "_base/variables";
+@import "_base/helpers";
+
+// libs
+// @import "_base/grid";
+
+// items
+@import "items/loader/loader";
+@import "items/btn/btn";
+@import "items/notice/notice";
+@import "items/text/text";
+
+// sections
+
+// pages
+@import "pages/index/index";
+@import "pages/game/game";
+
+// layout
+@import "layout/header/header";
+@import "layout/footer/footer";
+@import "windows/windows";
+@import "layout/layout";

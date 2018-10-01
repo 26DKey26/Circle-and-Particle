@@ -1,0 +1,25 @@
+include ../_assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    include head/head
+  +b.BODY(class=pageClass)
+    include ../items/notice/notice
+    include ../items/loader/loader
+
+    include header/header
+    +b.MAIN(role='main')
+      block content
+          
+    include footer/footer
+    include ../windows/windows
+
+    // build:js js/vendor.min.js
+    script(src='libs/jquery/jquery-3.3.1.min.js')
+    //endbuild
+    script(src='js/game.js')
+    script(src='js/main.js')

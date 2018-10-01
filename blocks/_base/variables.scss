@@ -1,0 +1,34 @@
+// ПАРАМЕТРЫ
+
+// Цвета
+$color-primary: #111;
+$color-secondary: #888;
+$color-light: #e0e0e0;
+$color-lightest: #efefef;
+$color-accent: #239bf6;
+$red: red;
+$white: #fff;
+$black: #fff;
+
+// Шрифты
+$main-font: "PT Sans";
+
+// Размер шрифта
+$font-size-base: (
+  null : 16px,
+  767px : 16px,
+  992px : 17px,
+  1200px: 19px
+);
+
+// Отступы
+$spacing-small: 0.75rem;
+$spacing-single: 1rem;
+$spacing-double: 2rem;
+$spacing-triple: 3rem;
+$spacing-big: 6rem;
+
+// Media queries
+$desktop: 1200px;
+$tablet: 992px;
+$mobile: 767px;

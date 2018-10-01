@@ -1,0 +1,51 @@
+.game{
+	.container{
+		position: relative;
+	}
+	.block{
+		border-radius: 10px;
+		width: 700px;
+		height: 200px;
+		background: rgba(0, 0, 0, 0.4);
+		position: relative;
+	}
+	.text{
+		padding-left: 20px;
+		padding-top: 30px;
+	}
+	.link{
+		position: relative;
+		z-index: 10;
+	}
+	canvas{
+		z-index: 0;
+		top: 0;
+		left: 0;
+		position: absolute;
+		border: 1px solid #aaa;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		overflow: hidden;
+		&:hover{
+			box-shadow: 0 0 20px rgba(0,0,0,0.5);
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px){
+	.game{
+		
+	}
+}
+
+@media only screen and (max-width: 992px){
+	.game{
+		
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.game{
+		
+	}
+}

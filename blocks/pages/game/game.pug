@@ -1,0 +1,16 @@
+extends ../../layout/layout
+
+block variables 
+  - var pageClass = '';
+  - var pageTitle = "Game";
+  - var pageDescription = ""
+  - var pageName = "game"
+
+block content
+  +b.SECTION.game
+    .container
+      //- div.block
+      //-   p.text Привет мир
+      //-   p.text Это карточка
+      //-   a.link(href="#") Ссылка
+      canvas(id="game", width="1200px", height="800px")

@@ -1,0 +1,15 @@
+{
+  "name": "dannybeast",
+  "description": "dannybeast",
+  "main": "index.js",
+  "authors": [
+    "dannybeast"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}

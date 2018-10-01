@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Game</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- build:css css/main.min.css-->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild-->
+  </head>
+  <body>
+    <div class="notice notice--red">
+      <p class="notice__text">успех
+      </p>
+    </div>
+    <div class="loader"><img src="img/loader/loader.svg" alt="" role="presentation"/>
+    </div>
+    <header>
+      <div class="container">
+        <p>Шапка
+        </p>
+      </div>
+    </header>
+    <main role="main">
+      <section class="game">
+        <div class="container">
+          <canvas id="game" width="1200px" height="800px"></canvas>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>© 2018 Стартовый шаблон. webkrd@mail.ru
+        </p>
+      </div>
+    </footer>
+    <!-- build:js js/vendor.min.js-->
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <!--endbuild-->
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

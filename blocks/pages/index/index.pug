@@ -1,0 +1,12 @@
+extends ../../layout/layout
+
+block variables 
+  - var pageClass = '';
+  - var pageTitle = "Game";
+  - var pageDescription = ""
+  - var pageName = "game"
+
+block content
+  +b.SECTION.game
+    .container
+      canvas(id="game", width="1200px", height="800px")

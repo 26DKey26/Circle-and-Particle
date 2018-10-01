@@ -1,0 +1,24 @@
+// кнопка
+.btn {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  background: transparent;
+  font-size: 1.25rem;
+  color: #000;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  text-decoration: none;
+  line-height: 1.06;
+  text-align: center;
+  letter-spacing: 2.3px;
+  font-family: $main-font;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  // модификатор
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
