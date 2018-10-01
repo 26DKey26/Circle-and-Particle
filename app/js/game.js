@@ -1,6 +1,6 @@
-var scrWidth = 1200;
-var scrHeight = 800;
-var BallCount = 20;
+var scrWidth = 1184;
+var scrHeight = 799;
+var BallCount = 30;
 ParticlesCount = 1000;
 
 class vector2D{

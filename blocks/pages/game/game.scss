@@ -2,25 +2,77 @@
 	.container{
 		position: relative;
 	}
-	.block{
+	.row{
 		border-radius: 10px;
-		width: 700px;
-		height: 200px;
+		width: 100%;
+		height: 800px;
 		background: rgba(0, 0, 0, 0.4);
-		position: relative;
+		display: flex;
 	}
 	.text{
 		padding-left: 20px;
 		padding-top: 30px;
 	}
-	.link{
+	.left{
+		width: 20%;
+	}
+	.card{
 		position: relative;
-		z-index: 10;
+		z-index: 2;
+		margin-left: 10px;
+		margin-top: 10px;
+		padding: 10px;
+		max-width: 300px;
+		background: rgb(241, 241, 241);
+		border: 1px solid rgb(179, 180, 155);
+		box-shadow: 0 0 10px rgba(154, 155, 92, 0.5);
+		border-radius: 5px;
+		&:hover{
+			box-shadow: 0 0 20px rgba(233, 236, 39, 0.5);
+			background: rgb(253, 251, 235);
+		}
+	}
+	.card-title{
+		padding-bottom: 10px;
+		border-bottom: 1px solid rgb(175, 117, 117);
+		text-align: center;
+		font-size: 20px;
+	}
+	.info{
+		background: rgb(255, 255, 255);
+		padding: 10px;
+		font-size: 16px;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		padding-bottom: 30px;
+	}
+	.right{
+		
+		width: 80%;
+		margin-top: 10px;
+		.container{
+			position: relative;
+			z-index: 2;
+		}
+		
+	}
+	.text-wrap{
+		background: #fff;
+		padding-bottom: 100px;
+		padding-right: 20px;
+		border-radius: 5px;
+	}
+	.title{
+		font-size: 24px;
+		margin-left: 20px;
+		padding-top: 20px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid rgb(224, 224, 224);
 	}
 	canvas{
 		z-index: 0;
 		top: 0;
-		left: 0;
+		left: 15px;
 		position: absolute;
 		border: 1px solid #aaa;
 		border-radius: 10px;
