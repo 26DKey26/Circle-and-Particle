@@ -35,6 +35,12 @@
       <section class="game">
         <div class="container">
           <canvas id="game" width="1184px" height="799px"></canvas>
+          <div class="score" id="score">0
+          </div>
+          <div class="menu hide"><a class="menu__button" id="start" href="#">Начать</a><a class="menu__button" id="level" href="#">Уровень сложности</a><a class="menu__button" id="free" href="#">Свободный режим</a><a class="menu__button" id="records" href="#">Рекорды</a><a class="menu__button" id="setup" href="#">Настройки</a>
+          </div>
+          <div class="menu hide" id="loose"><a class="menu__button" id="start" href="#" onclick="newGame()">Повторить</a><a class="menu__button" id="start" href="#">Вернуться в меню</a>
+          </div>
         </div>
       </section>
     </main>

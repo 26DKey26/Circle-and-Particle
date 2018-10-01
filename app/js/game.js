@@ -35,10 +35,6 @@ class Ball{
     this.posY = this.posY + this.velocity * this.vector.y;
   }
 
-  particles(){
-
-  }
-
   physBall(){
     if(this.velocity>0){
      //this.velocity = this.velocity - 0.01;
@@ -92,8 +88,25 @@ class Particle{
 
 var Balls = [];
 var Particles = [];
+var Score;
+var canvas = document.getElementById('game');
+var scoreTag = document.getElementById('score');
+var looseTag = document.getElementById('loose');
+var ctx = canvas.getContext('2d');
+var mouseX, mouseY;
+var gameOver = false;
+var buttonClick = false;
+
+function newGame(){
+  buttonClick = true;
+  init();
+}
 
 function init() {
+  Score = 0;
+  gameOver = false;
+  looseTag.classList.add("hide");
+  
   for(i=0; i<BallCount; i++){
     var vect = Math.random();
     c = Math.random()*128;
@@ -105,14 +118,19 @@ function init() {
     var c = Math.random()*256;
     Particles[i] = new Particle(mouseX, mouseY, Math.random()*5 + 2, vect.x, vect.y, Math.random()*230 + 20, c, c, c, Math.random());
   }
+  
   window.requestAnimationFrame(draw);
+  
+}
+
+function collision(posBallX, posBallY, radiusBall, posMouseX, posMouseY){
+  if( ((posBallX+radiusBall)>posMouseX)&&((posBallX-radiusBall)<posMouseX)&&((posBallY+radiusBall)>posMouseY)&&((posBallY-radiusBall)<posMouseY) )
+    return true;
+  else return false;
 }
 
 
 
-var canvas = document.getElementById('game');
-var ctx = canvas.getContext('2d');
-var mouseX, mouseY;
 
 
 canvas.onmousemove = function(event){
@@ -173,10 +191,24 @@ function draw() {
         Balls[i].vector = normalize(Balls[i].vector);
       }
     }
-    Balls[i].moveBall();
-    Balls[i].physBall();
+    if(collision(Balls[i].posX, Balls[i].posY, Balls[i].radius, mouseX, mouseY)){
+      gameOver = true;
+      Balls[i].color.R = 255;
+      looseTag.classList.remove("hide");
+    }
+    if(!gameOver){
+      Balls[i].moveBall();
+      Balls[i].physBall();
+      Score += 1;
+      scoreTag.innerHTML = Score;
+      
+    }
   }
-  window.requestAnimationFrame(draw);
+  
+  //console.log(Score);
+  if(!buttonClick)
+    window.requestAnimationFrame(draw);
+  buttonClick = false;
 }
 
 init();
