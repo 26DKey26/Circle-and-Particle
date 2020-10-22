@@ -1,5 +1,22 @@
-var scrWidth = 1184;
-var scrHeight = 799;
+(function() {
+  var canvas = document.getElementById('game'),
+          context = canvas.getContext('2d');
+
+  window.addEventListener('resize', resizeCanvas, false);
+
+  function resizeCanvas() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          drawStuff(); 
+  }
+  resizeCanvas();
+
+  function drawStuff() {
+  }
+})();
+
+var scrWidth = window.innerWidth;
+var scrHeight = window.innerHeight;
 var BallCount = 30;
 ParticlesCount = 1000;
 
@@ -51,8 +68,6 @@ class Ball{
     return "rgba(" + this.color.R + "," + this.color.G + "," + this.color.B + "," + this.color.A + ")";
   }
 }
-
-
 
 class Particle{
   constructor(x, y, velocity, vectorX, vectorY, life, R, G, B, A){
@@ -129,10 +144,6 @@ function collision(posBallX, posBallY, radiusBall, posMouseX, posMouseY){
   else return false;
 }
 
-
-
-
-
 canvas.onmousemove = function(event){
   mouseX = event.offsetX;
   mouseY = event.offsetY;
@@ -146,7 +157,6 @@ function normalize(vector){
 }
 
 function draw() {
-  
 
   ctx.globalCompositeOperation = 'destination-over';
   ctx.clearRect(0, 0, scrWidth, scrHeight); 
@@ -205,7 +215,6 @@ function draw() {
     }
   }
   
-  //console.log(Score);
   if(!buttonClick)
     window.requestAnimationFrame(draw);
   buttonClick = false;
